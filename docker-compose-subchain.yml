@@ -1,0 +1,49 @@
+version: '3'
+services:
+  subchain_validator0:
+    container_name: subchain_validator0
+    image: theta:latest
+    ports:
+      - "2205:22"
+      - "16889:16888"
+      - "18889:18888"
+    networks:
+      testnet:
+        ipv4_address: 10.10.1.5
+  subchain_validator1:
+    container_name: subchain_validator1
+    image: theta:latest
+    ports:
+      - "2206:22"
+    networks:
+      testnet:
+        ipv4_address: 10.10.1.6
+  subchain_validator2:
+    container_name: subchain_validator2
+    image: theta:latest
+    ports:
+      - "2207:22"
+    networks:
+      testnet:
+        ipv4_address: 10.10.1.7
+  subchain_validator3:
+    container_name: subchain_validator3
+    image: theta:latest
+    ports:
+      - "2208:22"
+    networks:
+      testnet:
+        ipv4_address: 10.10.1.8
+
+networks:
+  testnet:
+    external:
+      name: thetanet
+
+# networks:
+#   testnet:
+#     driver: bridge
+#     ipam:
+#       driver: default
+#       config:
+#         - subnet: 192.168.10.0/16
