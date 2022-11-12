@@ -1,6 +1,6 @@
 #!/bin/bash
 
-host_string=(" root@10.10.1.5" " root@10.10.1.6" " root@10.10.1.7" " root@10.10.1.8")
+host_string=(" -p 22 pzl97@apt159.apt.emulab.net" " -p 22 pzl97@apt162.apt.emulab.net" " -p 22 pzl97@apt161.apt.emulab.net" " -p 22 pzl97@apt158.apt.emulab.net")
 name="deploy-theta2"
 
 if [ "$1" == "connect" ]; then 
@@ -17,11 +17,11 @@ do
   tmux new-window -n "$i" -t "$name" -d
   tmux send -t $tmux_name "ssh ${host_string[i]}" Enter
 elif [ "$1" == "init" ]; then
-  tmux send -t $tmux_name "git clone  https://github.com/litrane/docker_experiment_environent.git" Enter
-  tmux send -t $tmux_name "cd docker_experiment_environent" Enter
+  tmux send -t $tmux_name "git clone  https://github.com/litrane/docker_theta_environment.git" Enter
+  tmux send -t $tmux_name "cd docker_theta_environment" Enter
   #tmux send -t $tmux_name "nohup ./earthd start --home=./workspace/earth/validator${i} > output 2>&1 & " Enter
 elif [ "$1" == "start" ]; then
-  tmux send -t $tmux_name "cd ~/theta" Enter
+  tmux send -t $tmux_name "cd theta" Enter
   tmux send -t $tmux_name "nohup ./theta-eth-rpc-adaptor start --config=./thetasub_eth_rpc_adaptor  > output 2>&1 &  " Enter
   tmux send -t $tmux_name "./thetasubchain start --config=./allsubchains/DSN_360777/node${val}/ --password=qwe " Enter
 elif [ "$1" == "update" ]; then

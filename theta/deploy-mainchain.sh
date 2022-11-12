@@ -1,6 +1,6 @@
 #!/bin/bash
 
-host_string=("-p 22  root@10.10.1.2" "-p 22 root@10.10.1.3" "-p 22 root@10.10.1.1" "-p 22 root@10.10.1.4")
+host_string=(" -p 22 pzl97@apt163.apt.emulab.net" " -p 22 pzl97@apt145.apt.emulab.net" " -p 22 pzl97@apt152.apt.emulab.net" " -p 22 pzl97@apt153.apt.emulab.net")
 name="deploy-theta1"
 
 if [ "$1" == "connect" ]; then 
@@ -17,11 +17,11 @@ do
   tmux new-window -n "$i" -t "$name" -d
   tmux send -t $tmux_name "ssh ${host_string[i]}" Enter
 elif [ "$1" == "init" ]; then
-  tmux send -t $tmux_name "git clone  https://github.com/litrane/docker_experiment_environent.git" Enter
-  tmux send -t $tmux_name "cd docker_experiment_environent" Enter
+  tmux send -t $tmux_name "git clone  https://github.com/litrane/docker_theta_environment.git" Enter
+  tmux send -t $tmux_name "cd docker_theta_environment" Enter
   #tmux send -t $tmux_name "nohup ./earthd start --home=./workspace/earth/validator${i} > output 2>&1 & " Enter
 elif [ "$1" == "start" ]; then
-  tmux send -t $tmux_name "cd ~/theta" Enter
+  tmux send -t $tmux_name "cd theta" Enter
   tmux send -t $tmux_name "nohup ./theta-eth-rpc-adaptor start --config=./eth_rpc_adaptor  > output 2>&1 &  " Enter
   tmux send -t $tmux_name "./theta start --config=./lab34/node${val}/ --password=qwertyuiop " Enter
 elif [ "$1" == "update" ]; then
