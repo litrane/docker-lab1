@@ -1,8 +1,9 @@
 #!/bin/bash
 
-host_string=(" -p 22 pzl97@apt159.apt.emulab.net" " -p 22 pzl97@apt162.apt.emulab.net" " -p 22 pzl97@apt161.apt.emulab.net" " -p 22 pzl97@apt158.apt.emulab.net")
+#host_string=(" -p 22 pzl97@apt159.apt.emulab.net" " -p 22 pzl97@apt162.apt.emulab.net" " -p 22 pzl97@apt161.apt.emulab.net" " -p 22 pzl97@apt158.apt.emulab.net")
+host_string=(" root@10.10.1.5" " root@10.10.1.6" " root@10.10.1.7" " root@10.10.1.8" " root@10.10.1.9" " root@10.10.1.10" " root@10.10.1.11" " root@10.10.1.12")
 name="deploy-theta2"
-0
+
 if [ "$1" == "connect" ]; then 
   tmux new-session -s $name -d
 fi 
@@ -10,7 +11,8 @@ fi
 for i in $( seq 0 `expr ${#host_string[@]} - 1 ` )
 
 do
-  val=`expr $i + 1`
+  val=`expr \( $i % 4 \) + 1 `
+  idCount=` expr $i / 4 + 1 + 360000 `
   tmux_name="$name:$i"
   #tmux neww -a -n "$client" -t $name
   if [ "$1" == "connect" ]; then 
@@ -23,7 +25,7 @@ elif [ "$1" == "init" ]; then
 elif [ "$1" == "start" ]; then
   tmux send -t $tmux_name "cd theta" Enter
   tmux send -t $tmux_name "nohup ./theta-eth-rpc-adaptor start --config=./thetasub_eth_rpc_adaptor  > output 2>&1 &  " Enter
-  tmux send -t $tmux_name "./thetasubchain start --config=./allsubchains/DSN_360777/node${val}/ --password=qwe " Enter
+  tmux send -t $tmux_name "./thetasubchain start --config=./allsubchains/DSN_$idCount/node${val}/ --password=qwe " Enter
 elif [ "$1" == "update" ]; then
   #tmux send -t $tmux_name "cd theta_experiment_file" Enter
   tmux send -t $tmux_name "git clean -xfd" Enter

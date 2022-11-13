@@ -1,6 +1,8 @@
 #!/bin/bash
 
-host_string=(" -p 22 pzl97@apt163.apt.emulab.net" " -p 22 pzl97@apt145.apt.emulab.net" " -p 22 pzl97@apt152.apt.emulab.net" " -p 22 pzl97@apt153.apt.emulab.net")
+#host_string=(" -p 22 pzl97@apt163.apt.emulab.net" " -p 22 pzl97@apt145.apt.emulab.net" " -p 22 pzl97@apt152.apt.emulab.net" " -p 22 pzl97@apt153.apt.emulab.net")
+host_string=(" root@10.10.1.1" " root@10.10.1.2" " root@10.10.1.3" " root@10.10.1.4" )
+
 name="deploy-theta1"
 
 if [ "$1" == "connect" ]; then 

@@ -1,33 +1,37 @@
 version: '3'
+
 services:
-  subchain_validator0:
-    container_name: subchain_validator0
+  subchainvalidator-0-0:
+    container_name: subchainvalidator-0-0
     image: theta:latest
     ports:
+      - "16900:22"
+      - "19888:22"
       - "2205:22"
-      - "16900:16900"
-      - "19888:19888"
     networks:
       thetanet:
         ipv4_address: 10.10.1.5
-  subchain_validator1:
-    container_name: subchain_validator1
+
+  subchainvalidator-0-1:
+    container_name: subchainvalidator-0-1
     image: theta:latest
     ports:
       - "2206:22"
     networks:
       thetanet:
         ipv4_address: 10.10.1.6
-  subchain_validator2:
-    container_name: subchain_validator2
+
+  subchainvalidator-0-2:
+    container_name: subchainvalidator-0-2
     image: theta:latest
     ports:
       - "2207:22"
     networks:
       thetanet:
         ipv4_address: 10.10.1.7
-  subchain_validator3:
-    container_name: subchain_validator3
+
+  subchainvalidator-0-3:
+    container_name: subchainvalidator-0-3
     image: theta:latest
     ports:
       - "2208:22"
@@ -35,15 +39,45 @@ services:
       thetanet:
         ipv4_address: 10.10.1.8
 
+  subchainvalidator-1-0:
+    container_name: subchainvalidator-1-0
+    image: theta:latest
+    ports:
+      - "16901:22"
+      - "19889:22"
+      - "2209:22"
+    networks:
+      thetanet:
+        ipv4_address: 10.10.1.9
+
+  subchainvalidator-1-1:
+    container_name: subchainvalidator-1-1
+    image: theta:latest
+    ports:
+      - "2210:22"
+    networks:
+      thetanet:
+        ipv4_address: 10.10.1.10
+
+  subchainvalidator-1-2:
+    container_name: subchainvalidator-1-2
+    image: theta:latest
+    ports:
+      - "2211:22"
+    networks:
+      thetanet:
+        ipv4_address: 10.10.1.11
+
+  subchainvalidator-1-3:
+    container_name: subchainvalidator-1-3
+    image: theta:latest
+    ports:
+      - "2212:22"
+    networks:
+      thetanet:
+        ipv4_address: 10.10.1.12
+
 networks:
   thetanet:
     external:
       name: thetanet
-
-# networks:
-#   thetanet:
-#     driver: bridge
-#     ipam:
-#       driver: default
-#       config:
-#         - subnet: 192.168.10.0/16
