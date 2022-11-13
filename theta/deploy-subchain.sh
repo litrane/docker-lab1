@@ -2,7 +2,7 @@
 
 host_string=(" -p 22 pzl97@apt159.apt.emulab.net" " -p 22 pzl97@apt162.apt.emulab.net" " -p 22 pzl97@apt161.apt.emulab.net" " -p 22 pzl97@apt158.apt.emulab.net")
 name="deploy-theta2"
-
+0
 if [ "$1" == "connect" ]; then 
   tmux new-session -s $name -d
 fi 
