@@ -26,12 +26,12 @@ do
 #   tmux send -t $tmux_name "cd docker-lab1" Enter
 #   #tmux send -t $tmux_name "nohup ./earthd start --home=./workspace/earth/validator${i} > output 2>&1 & " Enter
 elif [ "$1" == "start" ]; then
-  tmux send -t $tmux_name "cd docker-lab1" Enter
-  tmux send -t $tmux_name "cd theta" Enter
+  tmux send -t $tmux_name "cd ~/docker-lab1/theta" Enter
   tmux send -t $tmux_name "./tpsclient $i CrossChain 360001 0 " Enter
   echo "DSN_$idCount"
 elif [ "$1" == "update" ]; then
   #tmux send -t $tmux_name "cd theta_experiment_file" Enter
+  tmux send -t $tmux_name "rm tpsclient" Enter
   tmux send -t $tmux_name "git clean -xfd" Enter
   tmux send -t $tmux_name "git pull" Enter
 elif [ "$1" == "clean" ]; then
