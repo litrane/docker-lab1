@@ -20,8 +20,8 @@ generate_docker_compose_file(){
         echo "   image: $BINARY_IMAGE"
         echo "   ports:"
         if [ `expr $n % 4 ` -eq 0 ]; then
-            echo "   - \"$portStart:22\""
-            echo "   - \"$portEnd:22\""
+            echo "   - \"$portStart:16900\""
+            echo "   - \"$portEnd:19888\""
             let portStart=portStart+1
             let portEnd=portEnd+1
         fi
