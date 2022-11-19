@@ -1,6 +1,6 @@
 #!/bin/bash
 
-host_string=(" -p 22 pzl97@apt179.apt.emulab.net" " -p 22 pzl97@apt192.apt.emulab.net" " -p 22 pzl97@apt190.apt.emulab.net" " -p 22 pzl97@apt175.apt.emulab.net")
+host_string=(" -p 22 pzl97@apt152.apt.emulab.net" " -p 22 pzl97@apt163.apt.emulab.net" " -p 22 pzl97@apt153.apt.emulab.net" " -p 22 pzl97@apt159.apt.emulab.net")
 #host_string=(" root@10.10.1.5" " root@10.10.1.6" " root@10.10.1.7" " root@10.10.1.8" " root@10.10.1.9" " root@10.10.1.10" " root@10.10.1.11" " root@10.10.1.12")
 #host_string=(" root@10.10.1.5" " root@10.10.1.6" " root@10.10.1.7" " root@10.10.1.8" )
 
@@ -25,9 +25,9 @@ elif [ "$1" == "init" ]; then
   tmux send -t $tmux_name "cd docker-lab1" Enter
   #tmux send -t $tmux_name "nohup ./earthd start --home=./workspace/earth/validator${i} > output 2>&1 & " Enter
 elif [ "$1" == "start" ]; then
-  tmux send -t $tmux_name "cd theta" Enter
+  tmux send -t $tmux_name "cd ~/docker-lab1/theta" Enter
   tmux send -t $tmux_name "nohup ./theta-eth-rpc-adaptor start --config=./thetasub_eth_rpc_adaptor  > output 2>&1 &  " Enter
-  tmux send -t $tmux_name "./thetasubchain start --config=./allsubchains/DSN_$idCount/node${val}/ --password=qwe | tee sub.log " Enter
+  tmux send -t $tmux_name "nohup ./thetasubchain start --config=./allsubchains/DSN_$idCount/node${val}/ --password=qwe  > ./output.log 2>&1 & " Enter
   echo "DSN_$idCount"
 elif [ "$1" == "update" ]; then
   #tmux send -t $tmux_name "cd theta_experiment_file" Enter
@@ -35,7 +35,7 @@ elif [ "$1" == "update" ]; then
   tmux send -t $tmux_name "git pull" Enter
 elif [ "$1" == "clean" ]; then
   tmux send -t $tmux_name "cd ~" Enter
-  tmux send -t $tmux_name "rm -rf docker_experiment_environent" Enter
+  tmux send -t $tmux_name "rm -rf docker-lab1" Enter
 fi
 
   echo "start node${val}!"

@@ -3,7 +3,7 @@
 #host_string=(" -p 22 pzl97@apt190.apt.emulab.net" " -p 22 pzl97@apt184.apt.emulab.net" " -p 22 pzl97@apt189.apt.emulab.net" " -p 22 pzl97@apt185.apt.emulab.net")
 #host_string=(" root@10.10.1.5" " root@10.10.1.6" " root@10.10.1.7" " root@10.10.1.8" " root@10.10.1.9" " root@10.10.1.10" " root@10.10.1.11" " root@10.10.1.12")
 #host_string=(" root@10.10.1.5" " root@10.10.1.6" " root@10.10.1.7" " root@10.10.1.8" )
-host_string=(" -p 22 pzl97@apt179.apt.emulab.net" " -p 22 pzl97@apt192.apt.emulab.net" " -p 22 pzl97@apt190.apt.emulab.net" " -p 22 pzl97@apt175.apt.emulab.net")
+host_string=(" -p 22 pzl97@apt152.apt.emulab.net" " -p 22 pzl97@apt163.apt.emulab.net" " -p 22 pzl97@apt153.apt.emulab.net" " -p 22 pzl97@apt159.apt.emulab.net")
 
 name="deploy-client"
 
@@ -31,12 +31,14 @@ elif [ "$1" == "start" ]; then
   echo "DSN_$idCount"
 elif [ "$1" == "update" ]; then
   #tmux send -t $tmux_name "cd theta_experiment_file" Enter
-  tmux send -t $tmux_name "rm tpsclient" Enter
-  tmux send -t $tmux_name "git clean -xfd" Enter
-  tmux send -t $tmux_name "git pull" Enter
+  #tmux send -t $tmux_name "rm tpsclient" Enter
+  #tmux send -t $tmux_name "git clean -xfd" Enter
+  #tmux send -t $tmux_name "git pull" Enter
+  #tmux send -t $tmux_name "wget https://github.com/litrane/docker-lab1/raw/main/theta/tpsclient" Enter
+  tmux send -t $tmux_name "chmod +x tpsclient" Enter
 elif [ "$1" == "clean" ]; then
   tmux send -t $tmux_name "cd ~" Enter
-  tmux send -t $tmux_name "rm -rf docker_experiment_environent" Enter
+  tmux send -t $tmux_name "rm -rf docker-lab1" Enter
 fi
 
   echo "start node${val}!"

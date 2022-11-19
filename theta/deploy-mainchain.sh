@@ -1,6 +1,6 @@
 #!/bin/bash
 
-host_string=(" -p 22 pzl97@apt183.apt.emulab.net" " -p 22 pzl97@apt173.apt.emulab.net" " -p 22 pzl97@apt176.apt.emulab.net" " -p 22 pzl97@apt185.apt.emulab.net")
+host_string=(" -p 22 pzl97@apt145.apt.emulab.net" " -p 22 pzl97@apt146.apt.emulab.net" " -p 22 pzl97@apt158.apt.emulab.net" " -p 22 pzl97@apt161.apt.emulab.net")
 #host_string=(" root@10.10.1.1" " root@10.10.1.2" " root@10.10.1.3" " root@10.10.1.4" )
 
 name="deploy-theta1"
@@ -23,16 +23,16 @@ elif [ "$1" == "init" ]; then
   tmux send -t $tmux_name "cd docker-lab1" Enter
   #tmux send -t $tmux_name "nohup ./earthd start --home=./workspace/earth/validator${i} > output 2>&1 & " Enter
 elif [ "$1" == "start" ]; then
-  tmux send -t $tmux_name "cd theta" Enter
+  tmux send -t $tmux_name "cd ~/docker-lab1/theta" Enter
   tmux send -t $tmux_name "nohup ./theta-eth-rpc-adaptor start --config=./eth_rpc_adaptor  > output 2>&1 &  " Enter
-  tmux send -t $tmux_name "./theta start --config=./lab34/node${val}/ --password=qwertyuiop  | tee main.log " Enter
+  tmux send -t $tmux_name "nohup ./theta start --config=./lab34/node${val}/ --password=qwertyuiop   > ./output.log 2>&1 & " Enter
 elif [ "$1" == "update" ]; then
   #tmux send -t $tmux_name "cd theta_experiment_file" Enter
   tmux send -t $tmux_name "git clean -xfd" Enter
   tmux send -t $tmux_name "git pull" Enter
 elif [ "$1" == "clean" ]; then
   tmux send -t $tmux_name "cd ~" Enter
-  tmux send -t $tmux_name "rm -rf docker_experiment_environent" Enter
+  tmux send -t $tmux_name "rm -rf docker-lab1" Enter
 fi
 
   echo "start node${val}!"
