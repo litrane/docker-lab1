@@ -1,13 +1,10 @@
 # Theta configuration
 # chainID: private_multinode_subchain
 genesis:
-  hash: "0x86a6980df2374a4328988299bcc55ab6b72ce017a75e7cd1639fb426130e9929"
-rpc:
-  enabled: true
-  port: 16900
+  hash: "0xa4f7a76cd9d58dabdbd7dd1064090d2f48fdffb718c8fbdbfa8e91930c885dea"
 p2p:
-  port: 12100
-  seeds: 10.10.1.5:12100,10.10.1.6:12100,10.10.1.8:12100
+  port: 11300
+  seeds: 127.0.0.1:11100,127.0.0.1:12100,127.0.0.1:11200
   seedPeerOnlyOutbound: true
 log:
   levels: "*:info"
@@ -15,11 +12,11 @@ log:
 consensus:
   minBlockInterval: 1
 subchain:
-  mainchainEthRpcURL: "http://10.10.1.2:18888/rpc"
-  subchainEthRpcURL: "http://127.0.0.1:19888/rpc"
+  mainchainEthRpcURL: "http://localhost:18888/rpc"
+  subchainEthRpcURL: "http://localhost:19888/rpc"
   chainRegistrarOnMainchain: "0x08425D9Df219f93d5763c3e85204cb5B4cE33aAa"
   mainchainTFuelTB: "0x7f1C87Bd3a22159b8a2E5D195B1a3283D10ea895"
   mainchainTNT20TB: "0x2Ce636d6240f8955d085a896e12429f8B3c7db26"
   mainchainTNT721TB: "0xEd8d61f42dC1E56aE992D333A4992C3796b22A74"
   mockTNT20: "0x47c5e40890bcE4a473A49D7501808b9633F29782"
-  updateInterval: 200
+  updateInterval: 3000
