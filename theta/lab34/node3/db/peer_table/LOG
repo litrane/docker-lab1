@@ -5,12 +5,32 @@
 10:27:03.005664 db@janitor F·2 G·0
 10:27:03.005736 db@open done T·77.535713ms
 =============== Nov 13, 2022 (CST) ===============
-11:09:38.346743 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-11:09:38.348871 version@stat F·[] S·0B[] Sc·[]
-11:09:38.359541 db@open opening
-11:09:38.359774 journal@recovery F·1
-11:09:38.396331 journal@recovery recovering @1
-11:09:38.441113 memdb@flush created L0@2 N·6 S·245B "p2pPeer,v6":"p2pPeer,v1"
-11:09:38.443036 version@stat F·[1] S·245B[245B] Sc·[0.25]
-11:09:38.540031 db@janitor F·3 G·0
-11:09:38.540259 db@open done T·180.756023ms
+20:44:23.516869 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+20:44:23.517755 version@stat F·[] S·0B[] Sc·[]
+20:44:23.542347 db@open opening
+20:44:23.542572 journal@recovery F·1
+20:44:23.583642 journal@recovery recovering @1
+20:44:23.612039 memdb@flush created L0@2 N·6 S·245B "p2pPeer,v6":"p2pPeer,v1"
+20:44:23.614050 version@stat F·[1] S·245B[245B] Sc·[0.25]
+20:44:23.706023 db@janitor F·3 G·0
+20:44:23.706071 db@open done T·163.68391ms
+=============== Nov 16, 2022 (CST) ===============
+19:34:20.943249 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+19:34:20.945129 version@stat F·[1] S·245B[245B] Sc·[0.25]
+19:34:20.945162 db@open opening
+19:34:20.945291 journal@recovery F·1
+19:34:20.947446 journal@recovery recovering @3
+19:34:20.975766 memdb@flush created L0@5 N·6 S·250B "p2pPeer,v13":"p2pPeer,v8"
+19:34:20.980644 version@stat F·[2] S·495B[495B] Sc·[0.50]
+19:34:21.096192 db@janitor F·4 G·0
+19:34:21.132336 db@open done T·187.141453ms
+=============== Nov 20, 2022 (CST) ===============
+15:06:57.797030 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:06:57.797655 version@stat F·[2] S·495B[495B] Sc·[0.50]
+15:06:57.797717 db@open opening
+15:06:57.798001 journal@recovery F·1
+15:06:57.837996 journal@recovery recovering @6
+15:06:57.888591 memdb@flush created L0@8 N·6 S·245B "p2pPeer,v20":"p2pPeer,v15"
+15:06:57.890147 version@stat F·[3] S·740B[740B] Sc·[0.75]
+15:06:57.949306 db@janitor F·5 G·0
+15:06:57.949379 db@open done T·151.626556ms

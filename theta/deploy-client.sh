@@ -3,7 +3,7 @@
 #host_string=(" -p 22 pzl97@apt190.apt.emulab.net" " -p 22 pzl97@apt184.apt.emulab.net" " -p 22 pzl97@apt189.apt.emulab.net" " -p 22 pzl97@apt185.apt.emulab.net")
 #host_string=(" root@10.10.1.5" " root@10.10.1.6" " root@10.10.1.7" " root@10.10.1.8" " root@10.10.1.9" " root@10.10.1.10" " root@10.10.1.11" " root@10.10.1.12")
 #host_string=(" root@10.10.1.5" " root@10.10.1.6" " root@10.10.1.7" " root@10.10.1.8" )
-host_string=(" -p 22 pzl97@apt089.apt.emulab.net" " -p 22 pzl97@apt087.apt.emulab.net" " -p 22 pzl97@apt073.apt.emulab.net" " -p 22 pzl97@apt084.apt.emulab.net")
+host_string=(" -p 22 pzl97@apt089.apt.emulab.net" " -p 22 pzl97@apt083.apt.emulab.net" " -p 22 pzl97@apt087.apt.emulab.net" " -p 22 pzl97@apt090.apt.emulab.net")
 name="deploy-client"
 
 if [ "$1" == "connect" ]; then 
