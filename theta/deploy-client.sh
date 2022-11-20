@@ -3,8 +3,7 @@
 #host_string=(" -p 22 pzl97@apt190.apt.emulab.net" " -p 22 pzl97@apt184.apt.emulab.net" " -p 22 pzl97@apt189.apt.emulab.net" " -p 22 pzl97@apt185.apt.emulab.net")
 #host_string=(" root@10.10.1.5" " root@10.10.1.6" " root@10.10.1.7" " root@10.10.1.8" " root@10.10.1.9" " root@10.10.1.10" " root@10.10.1.11" " root@10.10.1.12")
 #host_string=(" root@10.10.1.5" " root@10.10.1.6" " root@10.10.1.7" " root@10.10.1.8" )
-host_string=(" -p 22 pzl97@apt152.apt.emulab.net" " -p 22 pzl97@apt163.apt.emulab.net" " -p 22 pzl97@apt153.apt.emulab.net" " -p 22 pzl97@apt159.apt.emulab.net")
-
+host_string=(" -p 22 pzl97@apt089.apt.emulab.net" " -p 22 pzl97@apt087.apt.emulab.net" " -p 22 pzl97@apt073.apt.emulab.net" " -p 22 pzl97@apt084.apt.emulab.net")
 name="deploy-client"
 
 if [ "$1" == "connect" ]; then 
@@ -27,7 +26,7 @@ do
 #   #tmux send -t $tmux_name "nohup ./earthd start --home=./workspace/earth/validator${i} > output 2>&1 & " Enter
 elif [ "$1" == "start" ]; then
   tmux send -t $tmux_name "cd ~/docker-lab1/theta" Enter
-  tmux send -t $tmux_name "./tpsclient $i CrossChain 360001 0 " Enter
+  tmux send -t $tmux_name "./tpsclient $i CrossChain 360001 0 |& tee output.log" Enter
   echo "DSN_$idCount"
 elif [ "$1" == "update" ]; then
   #tmux send -t $tmux_name "cd theta_experiment_file" Enter
