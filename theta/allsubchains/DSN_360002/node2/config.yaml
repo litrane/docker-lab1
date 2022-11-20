@@ -6,7 +6,7 @@ p2p:
   seeds: 10.10.1.9:12100,10.10.1.10:12100,10.10.1.11:12100,10.10.1.12:12100
   seedPeerOnlyOutbound: true
 rpc:
-  enable: true
+   enabled: true
 log:
   levels: "*:info"
 consensus:
