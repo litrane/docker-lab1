@@ -25,6 +25,7 @@ elif [ "$1" == "init" ]; then
   tmux send -t $tmux_name "cd docker-lab1" Enter
   #tmux send -t $tmux_name "nohup ./earthd start --home=./workspace/earth/validator${i} > output 2>&1 & " Enter
 elif [ "$1" == "start" ]; then
+  tmux send -t $tmux_name "ps -ef | grep theta| grep -v grep | awk '{print $2}' | xargs kill -9" Enter
   tmux send -t $tmux_name "cd ~/docker-lab1/theta" Enter
   tmux send -t $tmux_name "nohup ./theta-eth-rpc-adaptor start --config=./thetasub_eth_rpc_adaptor  > output 2>&1 &  " Enter
   tmux send -t $tmux_name "nohup ./thetasubchain start --config=./allsubchains/DSN_$idCount/node${val}/ --password=qwe  > ./output.log 2>&1 & " Enter
@@ -37,6 +38,8 @@ elif [ "$1" == "clean" ]; then
   tmux send -t $tmux_name "ps -ef | grep theta| grep -v grep | awk '{print $2}' | xargs kill -9" Enter
   tmux send -t $tmux_name "cd ~" Enter
   tmux send -t $tmux_name "rm -rf docker-lab1" Enter
+  elif [ "$1" == "stop" ]; then
+  tmux send -t $tmux_name "ps -ef | grep theta| grep -v grep | awk '{print $2}' | xargs kill -9" Enter
 fi
 
   echo "start node${val}!"
