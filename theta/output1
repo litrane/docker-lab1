@@ -1,0 +1,18 @@
+nohup: ignoring input
+panic: interface conversion: interface {} is nil, not common.JSONUint64
+
+goroutine 49 [running]:
+main.EthClient.LatestBlockHeight({0xc000112340?, 0xc00011a040?, {0x0?, 0x0?}}, {0x0?, 0x0?})
+	/home/dd/go/src/github.com/tps-test-tool/client.go:65 +0xbb
+main.(*EthClient).getGasPriceSuggestion(0xc0000fbdb8, {0xe92af0?, 0xc000115860?})
+	/home/dd/go/src/github.com/tps-test-tool/client.go:217 +0x65
+main.EthClient.Erc20TransferFrom({0xc000112340, 0xc00011a040, {0x0, 0x0}}, {0xe92af0, 0xc000115860}, {0xc95ddd?, 0x0?}, 0xc0000d35a8?, {0xc8c88c, ...}, ...)
+	/home/dd/go/src/github.com/tps-test-tool/client.go:365 +0x194
+main.(*EthTask).Do(0xc0002f2280, {0xe92af0?, 0xc000115860?}, 0x0?, {0xc95ddd, 0x40}, 0x0?, 0x0?, {0x0?}, {0xc8c95e, ...})
+	/home/dd/go/src/github.com/tps-test-tool/task.go:48 +0x1f3
+main.crossSubChainTNT20StressTest.func1({0xe923c0?, 0xc0002f2280}, 0x5)
+	/home/dd/go/src/github.com/tps-test-tool/stressCross.go:178 +0x1e5
+github.com/blockchain-tps-test/samples/theta/tps.(*Worker).Run(0xc00026c990, 0x0?, 0xc000350160?)
+	/home/dd/go/src/github.com/tps-test-tool/tps/worker.go:48 +0x87
+created by main.crossSubChainTNT20StressTest
+	/home/dd/go/src/github.com/tps-test-tool/stressCross.go:222 +0x5a8
