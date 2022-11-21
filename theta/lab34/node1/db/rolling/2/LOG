@@ -49,3 +49,21 @@
 15:07:04.636110 table@remove removed @10
 15:07:04.636392 table@remove removed @8
 15:07:04.636535 table@remove removed @9
+=============== Nov 21, 2022 (CST) ===============
+16:07:21.606370 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:07:21.616855 version@stat F·[0 2] S·2MiB[0B 2MiB] Sc·[0.00 0.02]
+16:07:21.616895 db@open opening
+16:07:21.617035 journal@recovery F·1
+16:07:21.625422 journal@recovery recovering @11
+16:07:21.737613 memdb@flush created L0@15 N·1432 S·174KiB "\x00\x1f^..>X\xbd,v15654":"\xff\xf4\x1a..֏\xcd,v14351"
+16:07:21.754146 version@stat F·[1 2] S·2MiB[174KiB 2MiB] Sc·[0.25 0.02]
+16:07:21.828613 db@janitor F·5 G·0
+16:07:21.828676 db@open done T·211.758264ms
+16:07:29.144129 table@compaction L0·1 -> L1·2 S·2MiB Q·15680
+16:07:29.365221 table@build created L1@18 N·9618 S·2MiB "\x00\x11\xed..\xb9\xf9&,v4040":"\xe9\f\x96..\xc1y\x95,v12095"
+16:07:29.387120 table@build created L1@19 N·939 S·206KiB "\xe9\x13\x80..\xa5\xf8@,v12989":"\xff\xfd\xbd..\xbc\xb7\xd1,v12382"
+16:07:29.387198 version@stat F·[0 2] S·2MiB[0B 2MiB] Sc·[0.00 0.02]
+16:07:29.407151 table@compaction committed F-1 S+16KiB Ke·0 D·413 T·262.835652ms
+16:07:29.407378 table@remove removed @15
+16:07:29.407775 table@remove removed @13
+16:07:29.407921 table@remove removed @14
