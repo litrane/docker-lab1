@@ -34,6 +34,7 @@ elif [ "$1" == "update" ]; then
   tmux send -t $tmux_name "git clean -xfd" Enter
   tmux send -t $tmux_name "git pull" Enter
 elif [ "$1" == "clean" ]; then
+  tmux send -t $tmux_name "ps -ef | grep theta| grep -v grep | awk '{print $2}' | xargs kill -9" Enter
   tmux send -t $tmux_name "cd ~" Enter
   tmux send -t $tmux_name "rm -rf docker-lab1" Enter
 fi
