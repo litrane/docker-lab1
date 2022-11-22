@@ -3,7 +3,7 @@
 #host_string=(" -p 22 pzl97@apt190.apt.emulab.net" " -p 22 pzl97@apt184.apt.emulab.net" " -p 22 pzl97@apt189.apt.emulab.net" " -p 22 pzl97@apt185.apt.emulab.net")
 #host_string=(" root@10.10.1.5" " root@10.10.1.6" " root@10.10.1.7" " root@10.10.1.8" " root@10.10.1.9" " root@10.10.1.10" " root@10.10.1.11" " root@10.10.1.12")
 #host_string=(" root@10.10.1.5" " root@10.10.1.6" " root@10.10.1.7" " root@10.10.1.8" )
-host_string=("pzl97@apt098.apt.emulab.net" "pzl97@apt107.apt.emulab.net" "pzl97@apt097.apt.emulab.net" "pzl97@apt110.apt.emulab.net")
+host_string=("pzl97@apt156.apt.emulab.net" "pzl97@apt161.apt.emulab.net" "pzl97@apt141.apt.emulab.net" "pzl97@apt144.apt.emulab.net")
 name="deploy-main"
 
 idCount="366"

@@ -67,3 +67,13 @@
 16:07:29.407378 table@remove removed @15
 16:07:29.407775 table@remove removed @13
 16:07:29.407921 table@remove removed @14
+=============== Nov 21, 2022 (CST) ===============
+22:25:56.171064 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+22:25:56.171268 version@stat F·[0 2] S·2MiB[0B 2MiB] Sc·[0.00 0.02]
+22:25:56.171277 db@open opening
+22:25:56.171312 journal@recovery F·1
+22:25:56.180176 journal@recovery recovering @16
+22:25:56.184425 memdb@flush created L0@20 N·310 S·30KiB "\x00EC..\xc0\xfa\x89,v15701":"\xfe\xca\xc7..\xff\x83\n,v15972"
+22:25:56.201712 version@stat F·[1 2] S·2MiB[30KiB 2MiB] Sc·[0.25 0.02]
+22:25:56.209071 db@janitor F·5 G·0
+22:25:56.209111 db@open done T·37.829949ms

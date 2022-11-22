@@ -1,6 +1,0 @@
-nohup: ignoring input
-Using config file: /home/dd/docker-lab1/theta/thetasub_eth_rpc_adaptor/config.yaml
-time="2022-11-20T20:10:19+08:00" level=info msg="Version 0.0.1 0e88409cffca015f37c6f37d59667759c9dff7d8"
-time="2022-11-20T20:10:19+08:00" level=info msg="Built at Thu Sep 15 07:40:37 UTC 2022"
-time="2022-11-20T20:10:19+08:00" level=info msg="Started RPC server at: 0.0.0.0:19888\n" prefix=rpc
-time="2022-11-20T20:10:19+08:00" level=info msg="Started WS server at: 127.0.0.1:19889\n" prefix=rpc
