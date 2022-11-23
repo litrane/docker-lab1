@@ -31,10 +31,10 @@ elif [ "$1" == "start" ]; then
   tmux send -t $tmux_name "nohup ./tpsclient_main $startID CrossChain $idCount 0 > output_main 2>&1 &" Enter
    startID=`expr \( $startID + 1 \)  `
    tmux send -t $tmux_name "nohup ./tpsclient_main $startID CrossChain $idCount 0 > output1 2>&1 & " Enter
-  #  startID=`expr \( $startID + 1 \)  `
-  #  tmux send -t $tmux_name "nohup ./tpsclient_main $startID CrossChain $idCount 0 > output2 2>&1 & " Enter
-  #  startID=`expr \( $startID + 1 \)  `
-  #  tmux send -t $tmux_name "nohup ./tpsclient_main $startID CrossChain $idCount 0 > output3 2>&1 & " Enter
+    startID=`expr \( $startID + 1 \)  `
+    tmux send -t $tmux_name "nohup ./tpsclient_main $startID CrossChain $idCount 0 > output2 2>&1 & " Enter
+    startID=`expr \( $startID + 1 \)  `
+    tmux send -t $tmux_name "nohup ./tpsclient_main $startID CrossChain $idCount 0 > output3 2>&1 & " Enter
 elif [ "$1" == "update" ]; then
   #tmux send -t $tmux_name "cd theta_experiment_file" Enter
   #tmux send -t $tmux_name "rm tpsclient" Enter
