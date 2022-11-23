@@ -1,6 +1,6 @@
 #!/bin/bash
 
-host_string=("pzl97@apt176.apt.emulab.net" "pzl97@apt183.apt.emulab.net" "pzl97@apt175.apt.emulab.net" "pzl97@apt180.apt.emulab.net")
+host_string=("pzl97@apt090.apt.emulab.net" "pzl97@apt163.apt.emulab.net" "pzl97@apt187.apt.emulab.net" "pzl97@apt112.apt.emulab.net")
 #host_string=(" root@10.10.1.1" " root@10.10.1.2" " root@10.10.1.3" " root@10.10.1.4" )
 
 name="deploy-theta1"
@@ -17,7 +17,7 @@ do
   #tmux neww -a -n "$client" -t $name
   if [ "$1" == "connect" ]; then 
   tmux new-window -n "$i" -t "$name" -d
-  tmux send -t $tmux_name "ssh ${host_string[i]}" Enter
+  tmux send -t $tmux_name "ssh   ${host_string[i]}" Enter
 elif [ "$1" == "init" ]; then
   tmux send -t $tmux_name "git clone  https://github.com/litrane/docker-lab1.git" Enter
   tmux send -t $tmux_name "cd docker-lab1" Enter
@@ -33,7 +33,7 @@ elif [ "$1" == "update" ]; then
   tmux send -t $tmux_name "git clean -xfd" Enter
   tmux send -t $tmux_name "git pull" Enter
 elif [ "$1" == "clean" ]; then
-  tmux send -t $tmux_name "ps -ef | grep theta| grep -v grep | awk '{print \$2}' | xargs kill -9" Enter
+  tmux send -t $tmux_name "ps -ef | grep theta | grep -v grep | awk '{print \$2}' | xargs kill -9" Enter
   tmux send -t $tmux_name "cd ~" Enter
   tmux send -t $tmux_name "rm -rf docker-lab1" Enter
 elif [ "$1" == "stop" ]; then

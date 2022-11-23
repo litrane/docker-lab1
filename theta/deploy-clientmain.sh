@@ -3,7 +3,7 @@
 #host_string=(" -p 22 pzl97@apt190.apt.emulab.net" " -p 22 pzl97@apt184.apt.emulab.net" " -p 22 pzl97@apt189.apt.emulab.net" " -p 22 pzl97@apt185.apt.emulab.net")
 #host_string=(" root@10.10.1.5" " root@10.10.1.6" " root@10.10.1.7" " root@10.10.1.8" " root@10.10.1.9" " root@10.10.1.10" " root@10.10.1.11" " root@10.10.1.12")
 #host_string=(" root@10.10.1.5" " root@10.10.1.6" " root@10.10.1.7" " root@10.10.1.8" )
-host_string=("pzl97@apt176.apt.emulab.net" "pzl97@apt183.apt.emulab.net" "pzl97@apt175.apt.emulab.net" "pzl97@apt180.apt.emulab.net")
+host_string=("pzl97@apt090.apt.emulab.net" "pzl97@apt163.apt.emulab.net" "pzl97@apt187.apt.emulab.net" "pzl97@apt112.apt.emulab.net")
 name="deploy-main"
 
 idCount="366"
@@ -20,7 +20,7 @@ do
   #tmux neww -a -n "$client" -t $name
   if [ "$1" == "connect" ]; then 
   tmux new-window -n "$i" -t "$name" -d
-  tmux send -t $tmux_name "ssh ${host_string[i]}" Enter
+  tmux send -t $tmux_name "ssh  ${host_string[i]}" Enter
 # elif [ "$1" == "init" ]; then
 #   tmux send -t $tmux_name "git clone  https://github.com/litrane/docker-lab1.git " Enter
 #   tmux send -t $tmux_name "cd docker-lab1" Enter
@@ -29,8 +29,8 @@ elif [ "$1" == "start" ]; then
   tmux send -t $tmux_name "cd ~/docker-lab1/theta" Enter
   startID=`expr \( $i % 4 \) \* 4  `
   tmux send -t $tmux_name "nohup ./tpsclient_main $startID CrossChain $idCount 0 > output_main 2>&1 &" Enter
-  #  startID=`expr \( $startID + 1 \)  `
-  #  tmux send -t $tmux_name "nohup ./tpsclient_main $startID CrossChain $idCount 0 > output1 2>&1 & " Enter
+   startID=`expr \( $startID + 1 \)  `
+   tmux send -t $tmux_name "nohup ./tpsclient_main $startID CrossChain $idCount 0 > output1 2>&1 & " Enter
   #  startID=`expr \( $startID + 1 \)  `
   #  tmux send -t $tmux_name "nohup ./tpsclient_main $startID CrossChain $idCount 0 > output2 2>&1 & " Enter
   #  startID=`expr \( $startID + 1 \)  `
