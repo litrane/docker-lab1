@@ -1,0 +1,43 @@
+=============== Nov 9, 2022 (CST) ===============
+10:27:01.879913 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+10:27:01.994184 db@open opening
+10:27:02.030841 version@stat F·[] S·0B[] Sc·[]
+10:27:02.106867 db@janitor F·2 G·0
+10:27:02.107255 db@open done T·112.549823ms
+=============== Nov 13, 2022 (CST) ===============
+20:44:22.460825 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+20:44:22.471307 version@stat F·[] S·0B[] Sc·[]
+20:44:22.471448 db@open opening
+20:44:22.471603 journal@recovery F·1
+20:44:22.473207 journal@recovery recovering @1
+20:44:22.503614 memdb@flush created L0@2 N·10 S·564B ")k\xad..\xa5\xb9\xf0,v10":"\xdb\xf0\xca..,\xbe\x02,v5"
+20:44:22.511715 version@stat F·[1] S·564B[564B] Sc·[0.25]
+20:44:22.586347 db@janitor F·3 G·0
+20:44:22.598022 db@open done T·126.548655ms
+=============== Nov 16, 2022 (CST) ===============
+19:34:19.982140 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+19:34:19.983504 version@stat F·[1] S·564B[564B] Sc·[0.25]
+19:34:19.983540 db@open opening
+19:34:19.983639 journal@recovery F·1
+19:34:19.985311 journal@recovery recovering @3
+19:34:20.000124 version@stat F·[1] S·564B[564B] Sc·[0.25]
+19:34:20.104011 db@janitor F·3 G·0
+19:34:20.122257 db@open done T·138.691814ms
+=============== Nov 20, 2022 (CST) ===============
+15:06:56.217452 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:06:56.217817 version@stat F·[1] S·564B[564B] Sc·[0.25]
+15:06:56.218044 db@open opening
+15:06:56.218284 journal@recovery F·1
+15:06:56.240214 journal@recovery recovering @5
+15:06:56.265243 version@stat F·[1] S·564B[564B] Sc·[0.25]
+15:06:56.438716 db@janitor F·3 G·0
+15:06:56.457877 db@open done T·239.787156ms
+=============== Nov 21, 2022 (CST) ===============
+16:07:21.355243 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:07:21.356252 version@stat F·[1] S·564B[564B] Sc·[0.25]
+16:07:21.374810 db@open opening
+16:07:21.375141 journal@recovery F·1
+16:07:21.387637 journal@recovery recovering @7
+16:07:21.401036 version@stat F·[1] S·564B[564B] Sc·[0.25]
+16:07:21.501936 db@janitor F·3 G·0
+16:07:21.501995 db@open done T·127.097147ms
