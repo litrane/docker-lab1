@@ -17,7 +17,7 @@ RUN apt-get update && \
 
 EXPOSE 2-65535
 
-COPY  theta/ /root/theta/
+COPY  theta/ /root/docker-lab1/theta/
 
 CMD ["/usr/sbin/sshd", "-D"]
 
