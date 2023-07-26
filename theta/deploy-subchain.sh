@@ -1,6 +1,6 @@
 #!/bin/bash
 
-host_string=("pzl97@pc738.emulab.net" "pzl97@pc852.emulab.net" "pzl97@pc722.emulab.net" "pzl97@pc735.emulab.net" "pzl97@pc730.emulab.net" "pzl97@pc845.emulab.net" "pzl97@pc825.emulab.net" "pzl97@pc706.emulab.net" "pzl97@pc841.emulab.net" "pzl97@pc855.emulab.net" "pzl97@pc731.emulab.net" "pzl97@pc708.emulab.net" "pzl97@pc712.emulab.net" "pzl97@pc714.emulab.net" "pzl97@pc857.emulab.net" "pzl97@pc847.emulab.net" "pzl97@pc716.emulab.net" "pzl97@pc729.emulab.net" "pzl97@pc840.emulab.net" "pzl97@pc715.emulab.net" "pzl97@pc854.emulab.net" "pzl97@pc844.emulab.net" "pzl97@pc849.emulab.net" "pzl97@pc856.emulab.net" "pzl97@pc859.emulab.net" "pzl97@pc833.emulab.net" "pzl97@pc860.emulab.net" "pzl97@pc728.emulab.net" "pzl97@pc830.emulab.net" "pzl97@pc737.emulab.net" "pzl97@pc829.emulab.net" "pzl97@pc701.emulab.net")
+host_string=("pzl97@apt070.apt.emulab.net" "pzl97@apt091.apt.emulab.net" "pzl97@apt088.apt.emulab.net" "pzl97@apt087.apt.emulab.net")
 #host_string=(" root@10.10.1.5" " root@10.10.1.6" " root@10.10.1.7" " root@10.10.1.8" " root@10.10.1.9" " root@10.10.1.10" " root@10.10.1.11" " root@10.10.1.12")
 #host_string=(" root@10.10.1.5" " root@10.10.1.6" " root@10.10.1.7" " root@10.10.1.8" )
 
