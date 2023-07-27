@@ -50,3 +50,4 @@ fi
 
 done
 
+#./tpsclient-new 0 CrossChain 360001 0 > output3 2>&1 & 
