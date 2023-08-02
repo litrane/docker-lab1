@@ -1,23 +1,25 @@
 # Theta configuration
 genesis:
-  hash: "0xbe7051cba9b3def48fa2f517aa1a7bc174728b239f7b26160dd6e69deb88af90"
+  hash: "0x8d53ca23ee29c842d8220bcbf6955cf76505d05ae57cecd0adca9b3b77b90a82"
 p2p:
   port: 12100
-  seeds: 10.10.1.5:12100,10.10.1.6:12100,10.10.1.7:12100,10.10.1.8:12100
+  seeds: 
   seedPeerOnlyOutbound: true
 rpc:
+  enabled: true
+orchestrator:
   enabled: true
 log:
   levels: "*:info"
 consensus:
   minBlockInterval: 1
 subchain:
-  mainchainEthRpcURL: "http://10.10.1.9:18888/rpc"
+  mainchainEthRpcURL: "http://10.10.1.6:18888/rpc"
   subchainEthRpcURL: "http://127.0.0.1:19888/rpc"
   chainRegistrarOnMainchain: "0x08425D9Df219f93d5763c3e85204cb5B4cE33aAa"
   mainchainTFuelTB: "0x7f1C87Bd3a22159b8a2E5D195B1a3283D10ea895"
   mainchainTNT20TB: "0x2Ce636d6240f8955d085a896e12429f8B3c7db26"
   mainchainTNT721TB: "0xEd8d61f42dC1E56aE992D333A4992C3796b22A74"
   mockTNT20: "0x47c5e40890bcE4a473A49D7501808b9633F29782"
-  updateInterval: 200
+  updateInterval: 5
   chainID: 360001

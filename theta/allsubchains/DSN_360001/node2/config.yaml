@@ -7,6 +7,8 @@ p2p:
   seedPeerOnlyOutbound: true
 rpc:
   enabled: true
+orchestrator:
+  enabled: false
 log:
   levels: "*:info"
 consensus:
