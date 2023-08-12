@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#host_string=("pzl97@apt083.apt.emulab.net" "pzl97@apt090.apt.emulab.net" "pzl97@apt066.apt.emulab.net" "pzl97@apt091.apt.emulab.net")
-host_string=(" root@10.10.1.1" " root@10.10.1.2" " root@10.10.1.3" " root@10.10.1.4" )
+host_string=("pzl97@apt084.apt.emulab.net" "pzl97@apt067.apt.emulab.net" "pzl97@apt083.apt.emulab.net" "pzl97@apt085.apt.emulab.net")
+# host_string=(" root@10.10.1.1" " root@10.10.1.2" " root@10.10.1.3" " root@10.10.1.4" )
 
 name="deploy-theta1"
 
