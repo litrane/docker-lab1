@@ -39,6 +39,10 @@ elif [ "$1" == "clean" ]; then
   tmux send -t $tmux_name "rm -rf docker-lab1" Enter
 elif [ "$1" == "stop" ]; then
   tmux send -t $tmux_name " ps -ef | grep theta | grep -v grep | awk '{print \$2}' | xargs kill -9" Enter
+elif [ "$1" == "cleanDB" ]; then
+  tmux send -t $tmux_name " ps -ef | grep theta | grep -v grep | awk '{print \$2}' | xargs kill -9" Enter
+  tmux send -t $tmux_name "cd ~/docker-lab1" Enter
+  tmux send -t $tmux_name "git clean -xfd" Enter
 fi
 
   echo "start node${val}!"
