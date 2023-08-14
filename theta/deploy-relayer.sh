@@ -1,6 +1,6 @@
 #!/bin/bash
 
-host_string=("pzl97@apt072.apt.emulab.net")
+host_string=("pzl97@apt164.apt.emulab.net")
 # host_string=(" root@10.10.1.6" )
 #host_string=("pzl97@apt117.apt.emulab.net")
 name="deploy-theta3"
