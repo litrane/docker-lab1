@@ -1,6 +1,6 @@
 #!/bin/bash
 
-host_string=("pzl97@apt186.apt.emulab.net")
+host_string=("pzl97@apt140.apt.emulab.net")
 #host_string=(" root@10.10.1.5" " root@10.10.1.6" " root@10.10.1.7" " root@10.10.1.8" " root@10.10.1.9" " root@10.10.1.10" " root@10.10.1.11" " root@10.10.1.12")
 # host_string=(" root@10.10.1.5" )
 
@@ -43,7 +43,8 @@ elif [ "$1" == "clean" ]; then
   tmux send -t $tmux_name "rm -rf docker-lab1" Enter
 elif [ "$1" == "stop" ]; then
   tmux send -t $tmux_name "kill -9 $(pidof theta)" Enter
-  tmux send -t $tmux_name "kill -9 $(pidof tsub_upda)" Enter
+  tmux send -t $tmux_name "kill -9 $(pidof tsub_update)" Enter
+  tmux send -t $tmux_name " ps -ef | grep tsub_update | grep -v grep | awk '{print \$2}' | xargs kill -9" Enter
 elif [ "$1" == "cleanDB" ]; then
   tmux send -t $tmux_name " ps -ef | grep tsub | grep -v grep | awk '{print \$2}' | xargs kill -9" Enter
   tmux send -t $tmux_name "cd ~/docker-lab1" Enter
