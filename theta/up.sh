@@ -1,0 +1,11 @@
+./deploy-mainchain.sh connect
+sleep 1
+./deploy-mainchain.sh start
+sleep 1
+./deploy-relayer.sh connect
+sleep 1
+./deploy-relayer.sh start
+sleep 1
+./deploy-subchain.sh connect
+sleep 1
+./deploy-subchain.sh start
