@@ -8,3 +8,5 @@ p2p:
 rpc:
   enabled: true
   port: 16888
+log:
+  levels: "*:info"

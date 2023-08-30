@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#host_string=("pzl97@apt102.apt.emulab.net")
-host_string=(" root@10.10.1.9" )
+host_string=("pzl97@apt097.apt.emulab.net")
+# host_string=(" root@10.10.1.9" )
 #host_string=("pzl97@apt117.apt.emulab.net")
 name="deploy-theta3"
 
@@ -19,7 +19,7 @@ do
   tmux new-window -n "$i" -t "$name" -d
   tmux send -t $tmux_name "ssh   ${host_string[i]}" Enter
 elif [ "$1" == "init" ]; then
-  tmux send -t $tmux_name "git clone  https://github.com/litrane/docker-lab1.git" Enter
+  tmux send -t $tmux_name "git clone -b finalinterchain https://github.com/litrane/docker-lab1.git" Enter
   tmux send -t $tmux_name "cd docker-lab1" Enter
   #tmux send -t $tmux_name "nohup ./earthd start --home=./workspace/earth/validator${i} > output 2>&1 & " Enter
 elif [ "$1" == "start" ]; then

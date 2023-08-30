@@ -1,7 +1,8 @@
 #!/bin/bash
 
 #host_string=("pzl97@apt098.apt.emulab.net" "pzl97@apt111.apt.emulab.net" "pzl97@apt107.apt.emulab.net" "pzl97@apt116.apt.emulab.net")
-host_string=(" root@10.10.1.5"  )
+host_string=("pzl97@apt096.apt.emulab.net") 
+# host_string=(" root@10.10.1.5"  )
 #host_string=(" root@10.10.1.5" " root@10.10.1.6" " root@10.10.1.7" " root@10.10.1.8"   )
 
 name="deploy-theta2"
@@ -21,7 +22,7 @@ do
   tmux new-window -n "$i" -t "$name" -d
   tmux send -t $tmux_name "ssh  ${host_string[i]}" Enter
 elif [ "$1" == "init" ]; then
-  tmux send -t $tmux_name "git clone  https://github.com/litrane/docker-lab1.git " Enter
+  tmux send -t $tmux_name "git clone -b finalinterchain https://github.com/litrane/docker-lab1.git " Enter
   tmux send -t $tmux_name "cd docker-lab1" Enter
   #tmux send -t $tmux_name "nohup ./earthd start --home=./workspace/earth/validator${i} > output 2>&1 & " Enter
 elif [ "$1" == "start" ]; then
@@ -40,8 +41,14 @@ elif [ "$1" == "clean" ]; then
   tmux send -t $tmux_name "ps -ef | grep tps | grep -v grep | awk '{print \$2}' | xargs kill -9" Enter
   tmux send -t $tmux_name "cd ~" Enter
   tmux send -t $tmux_name "rm -rf docker-lab1" Enter
-  elif [ "$1" == "stop" ]; then
+elif [ "$1" == "stop" ]; then
   tmux send -t $tmux_name "kill -9 $(pidof theta)" Enter
+  tmux send -t $tmux_name "kill -9 $(pidof tsub_update)" Enter
+  tmux send -t $tmux_name " ps -ef | grep tsub_update | grep -v grep | awk '{print \$2}' | xargs kill -9" Enter
+elif [ "$1" == "cleanDB" ]; then
+  tmux send -t $tmux_name " ps -ef | grep tsub | grep -v grep | awk '{print \$2}' | xargs kill -9" Enter
+  tmux send -t $tmux_name "cd ~/docker-lab1" Enter
+  tmux send -t $tmux_name "git clean -xfd" Enter
 fi
 
   echo "start node${val}!"
