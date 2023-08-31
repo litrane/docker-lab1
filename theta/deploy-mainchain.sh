@@ -43,6 +43,11 @@ elif [ "$1" == "cleanDB" ]; then
   tmux send -t $tmux_name " ps -ef | grep theta | grep -v grep | awk '{print \$2}' | xargs kill -9" Enter
   tmux send -t $tmux_name "cd ~/docker-lab1" Enter
   tmux send -t $tmux_name "git clean -xfd" Enter
+elif [ "$1" == "backup" ]; then
+  tmux send -t $tmux_name "cp -rf ~/docker-lab1/theta/mainchain/node${val}/db ~/docker-lab1/theta/mainchain/node${val}/db_cp" Enter
+elif [ "$1" == "reset" ]; then
+  tmux send -t $tmux_name "rm -rf ~/docker-lab1/theta/mainchain/node${val}/db" Enter  
+  tmux send -t $tmux_name "cp -rf ~/docker-lab1/theta/mainchain/node${val}/db_cp ~/docker-lab1/theta/mainchain/node${val}/db" Enter  
 fi
 
   echo "start node${val}!"
