@@ -47,7 +47,9 @@ elif [ "$1" == "backup" ]; then
   tmux send -t $tmux_name "cp -rf ~/docker-lab1/theta/mainchain/node${val}/db ~/docker-lab1/theta/mainchain/node${val}/db_cp" Enter
 elif [ "$1" == "reset" ]; then
   tmux send -t $tmux_name "rm -rf ~/docker-lab1/theta/mainchain/node${val}/db" Enter  
-  tmux send -t $tmux_name "cp -rf ~/docker-lab1/theta/mainchain/node${val}/db_cp ~/docker-lab1/theta/mainchain/node${val}/db" Enter  
+  tmux send -t $tmux_name "cp -rf ~/docker-lab1/theta/mainchain/node${val}/db_cp ~/docker-lab1/theta/mainchain/node${val}/db" Enter 
+elif [ "$1" == "ud" ]; then
+  tmux send -t $tmux_name "git pull" Enter  
 fi
 
   echo "start node${val}!"
