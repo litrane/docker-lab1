@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #host_string=("pzl97@apt098.apt.emulab.net" "pzl97@apt111.apt.emulab.net" "pzl97@apt107.apt.emulab.net" "pzl97@apt116.apt.emulab.net")
-host_string=("pzl97@apt096.apt.emulab.net") 
+host_string=("pzl97@apt158.apt.emulab.net") 
 # host_string=(" root@10.10.1.5"  )
 #host_string=(" root@10.10.1.5" " root@10.10.1.6" " root@10.10.1.7" " root@10.10.1.8"   )
 
