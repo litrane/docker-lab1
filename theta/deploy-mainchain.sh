@@ -39,6 +39,8 @@ elif [ "$1" == "clean" ]; then
   tmux send -t $tmux_name "rm -rf docker-lab1" Enter
 elif [ "$1" == "stop" ]; then
   tmux send -t $tmux_name " ps -ef | grep theta | grep -v grep | awk '{print \$2}' | xargs kill -9" Enter
+elif [ "$1" == "cd" ]; then
+  tmux send -t $tmux_name " cd ~/theta" Enter
 fi
 
   echo "start node${val}!"
