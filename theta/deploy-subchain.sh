@@ -46,7 +46,6 @@ elif [ "$1" == "stop" ]; then
   tmux send -t $tmux_name "kill -9 $(pidof tsub_update)" Enter
   tmux send -t $tmux_name " ps -ef | grep tsub_update | grep -v grep | awk '{print \$2}' | xargs kill -9" Enter
 elif [ "$1" == "cleanDB" ]; then
-  tmux send -t $tmux_name " ps -ef | grep tsub | grep -v grep | awk '{print \$2}' | xargs kill -9" Enter
   tmux send -t $tmux_name "cd ~/docker-lab1" Enter
   tmux send -t $tmux_name "git clean -xfd" Enter
 fi
