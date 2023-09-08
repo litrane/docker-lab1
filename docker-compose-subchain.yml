@@ -45,7 +45,30 @@ services:
     networks:
       thetanet:
         ipv4_address: 10.10.1.9
-
+  subchainvalidator-0-5:
+    container_name: subchainvalidator-0-5
+    image: theta:latest
+    ports:
+      - "2210:22"
+    networks:
+      thetanet:
+        ipv4_address: 10.10.1.10
+  subchainvalidator-0-6:
+    container_name: subchainvalidator-0-6
+    image: theta:latest
+    ports:
+      - "2211:22"
+    networks:
+      thetanet:
+        ipv4_address: 10.10.1.11 
+  subchainvalidator-0-7:
+    container_name: subchainvalidator-0-7
+    image: theta:latest
+    ports:
+      - "2212:22"
+    networks:
+      thetanet:
+        ipv4_address: 10.10.1.12
 networks:
   thetanet:
     external:

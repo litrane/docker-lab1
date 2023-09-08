@@ -1,0 +1,52 @@
+version: '3'
+
+services:
+  subchainvalidator-0-0:
+    container_name: subchainvalidator-0-0
+    image: theta:latest
+    ports:
+      - "16900:16900"
+      - "19888:19888"
+      - "2205:22"
+    networks:
+      thetanet:
+        ipv4_address: 10.10.1.5
+
+  subchainvalidator-0-1:
+    container_name: subchainvalidator-0-1
+    image: theta:latest
+    ports:
+      - "2206:22"
+    networks:
+      thetanet:
+        ipv4_address: 10.10.1.6
+  subchainvalidator-0-2:
+    container_name: subchainvalidator-0-2
+    image: theta:latest
+    ports:
+      - "2207:22"
+    networks:
+      thetanet:
+        ipv4_address: 10.10.1.7
+
+  subchainvalidator-0-3:
+    container_name: subchainvalidator-0-3
+    image: theta:latest
+    ports:
+      - "2208:22"
+    networks:
+      thetanet:
+        ipv4_address: 10.10.1.8
+  subchainvalidator-0-4:
+    container_name: subchainvalidator-0-4
+    image: theta:latest
+    ports:
+      - "2209:22"
+    networks:
+      thetanet:
+        ipv4_address: 10.10.1.9
+
+networks:
+  thetanet:
+    external:
+      name: thetanet
