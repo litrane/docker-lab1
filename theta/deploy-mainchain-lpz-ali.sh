@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #host_string=("pzl97@apt115.apt.emulab.net" "pzl97@apt108.apt.emulab.net" "pzl97@apt104.apt.emulab.net" "pzl97@apt097.apt.emulab.net")
-host_string=(" root@10.10.1.1" " root@10.10.1.2" " root@10.10.1.3" " root@10.10.1.4" )
+host_string=(" root@172.25.148.192" " root@172.25.148.193" " root@172.25.148.194" " root@172.25.148.195" )
 
 name="deploy-theta1"
 
@@ -37,6 +37,7 @@ elif [ "$1" == "clean" ]; then
     tmux send -t $tmux_name "ps -ef | grep tps | grep -v grep | awk '{print \$2}' | xargs kill -9" Enter
   tmux send -t $tmux_name "cd ~" Enter
   tmux send -t $tmux_name "rm -rf docker-lab1" Enter
+  tmux send -t $tmux_name "rm -rf docker-lab1-bak" Enter
 elif [ "$1" == "stop" ]; then
   tmux send -t $tmux_name " ps -ef | grep theta | grep -v grep | awk '{print \$2}' | xargs kill -9" Enter
 fi
