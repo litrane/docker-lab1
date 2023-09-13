@@ -21,5 +21,5 @@ subchain:
   mainchainTNT20TB: "0x2Ce636d6240f8955d085a896e12429f8B3c7db26"
   mainchainTNT721TB: "0xEd8d61f42dC1E56aE992D333A4992C3796b22A74"
   mockTNT20: "0x47c5e40890bcE4a473A49D7501808b9633F29782"
-  updateInterval: 1000
+  updateInterval: 5
   chainID: 360001
