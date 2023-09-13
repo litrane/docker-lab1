@@ -25,6 +25,7 @@ elif [ "$1" == "init" ]; then
 elif [ "$1" == "start" ]; then
   #tmux send -t $tmux_name "ps -ef | grep theta| grep -v grep | awk '{print $2}' | xargs kill -9" Enter
   tmux send -t $tmux_name "cd ~/docker-lab1/theta" Enter
+  tmux send -t $tmux_name "nohup ./theta-eth-rpc-adaptor start --config=./eth_rpc_adaptor1  > output 2>&1 &  " Enter
   #tmux send -t $tmux_name "nohup ./theta-eth-rpc-adaptor start --config=./eth_rpc_adaptor  > output 2>&1 &  " Enter
   tmux send -t $tmux_name "nohup ./theta start --config=./mainchain/node${val}/ --password=qwertyuiop   > ./output.log 2>&1 & " Enter
 elif [ "$1" == "update" ]; then
