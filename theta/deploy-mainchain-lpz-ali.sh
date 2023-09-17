@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #host_string=("pzl97@apt115.apt.emulab.net" "pzl97@apt108.apt.emulab.net" "pzl97@apt104.apt.emulab.net" "pzl97@apt097.apt.emulab.net")
-host_string=(" root@172.25.149.36" " root@172.25.149.37" " root@172.25.149.38" " root@172.25.149.39" )
+host_string=(" root@172.25.149.104" " root@172.25.149.105" " root@172.25.149.106" " root@172.25.149.107" )
 
 name="deploy-theta1"
 
@@ -24,8 +24,8 @@ elif [ "$1" == "init" ]; then
   #tmux send -t $tmux_name "nohup ./earthd start --home=./workspace/earth/validator${i} > output 2>&1 & " Enter
 elif [ "$1" == "start" ]; then
   #tmux send -t $tmux_name "ps -ef | grep theta| grep -v grep | awk '{print $2}' | xargs kill -9" Enter
-  tmux send -t $tmux_name "cd ~/docker-lab1/theta" Enter
-  tmux send -t $tmux_name "nohup ./theta-eth-rpc-adaptor start --config=./eth_rpc_adaptor${val}  > output 2>&1 &  " Enter
+  tmux send -t $tmux_name "cd ~/docker-lab4/theta" Enter
+  tmux send -t $tmux_name "nohup ./theta-eth-rpc-adaptor start --config=./eth_rpc_adaptor${val}  > adaoutput 2>&1 &  " Enter
   tmux send -t $tmux_name "nohup ./theta start --config=./mainchain_ipdps/node${val}/ --password=qwertyuiop   > ./output.log 2>&1 & " Enter
 elif [ "$1" == "update" ]; then
   tmux send -t $tmux_name " ps -ef | grep theta | grep -v grep | awk '{print \$2}' | xargs kill -9" Enter
@@ -36,8 +36,8 @@ elif [ "$1" == "clean" ]; then
   tmux send -t $tmux_name "ps -ef | grep theta | grep -v grep | awk '{print \$2}' | xargs kill -9" Enter
     tmux send -t $tmux_name "ps -ef | grep tps | grep -v grep | awk '{print \$2}' | xargs kill -9" Enter
   tmux send -t $tmux_name "cd ~" Enter
-  tmux send -t $tmux_name "rm -rf docker-lab1" Enter
-  tmux send -t $tmux_name "rm -rf docker-lab1-bak" Enter
+  tmux send -t $tmux_name "rm -rf docker-lab4" Enter
+  tmux send -t $tmux_name "rm -rf docker-lab4-bak" Enter
 elif [ "$1" == "stop" ]; then
   tmux send -t $tmux_name " ps -ef | grep theta | grep -v grep | awk '{print \$2}' | xargs kill -9" Enter
 fi

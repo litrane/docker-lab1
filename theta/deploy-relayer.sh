@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #host_string=("pzl97@apt102.apt.emulab.net")
-host_string=(" root@10.10.1.9" )
+host_string=(" root@172.25.149.109" )
 #host_string=("pzl97@apt117.apt.emulab.net")
 name="deploy-theta3"
 
@@ -12,7 +12,7 @@ fi
 for i in $( seq 0  `expr ${#host_string[@]} - 1` )
 
 do
-  val=`expr $i + 1`
+  val=8
   tmux_name="$name:$i"
   #tmux neww -a -n "$client" -t $name
   if [ "$1" == "connect" ]; then 
@@ -24,7 +24,7 @@ elif [ "$1" == "init" ]; then
   #tmux send -t $tmux_name "nohup ./earthd start --home=./workspace/earth/validator${i} > output 2>&1 & " Enter
 elif [ "$1" == "start" ]; then
   #tmux send -t $tmux_name "ps -ef | grep theta| grep -v grep | awk '{print $2}' | xargs kill -9" Enter
-  tmux send -t $tmux_name "cd ~/docker-lab1/theta" Enter
+  tmux send -t $tmux_name "cd ~/docker-lab4/theta" Enter
   tmux send -t $tmux_name "nohup ./theta-eth-rpc-adaptor start --config=./eth_rpc_adaptor${val}  > output 2>&1 &  " Enter
   #tmux send -t $tmux_name "nohup ./theta start --config=./lab34/node${val}/ --password=qwertyuiop   > ./output.log 2>&1 & " Enter
 elif [ "$1" == "update" ]; then

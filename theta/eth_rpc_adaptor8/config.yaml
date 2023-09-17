@@ -1,5 +1,5 @@
 theta:
-  rpcEndpoint: "http://10.10.1.4:16888/rpc"
+  rpcEndpoint: "http://172.25.149.104:16888/rpc"
 node:
   skipInitializeTestWallets: true
 rpc:
