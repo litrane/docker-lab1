@@ -1,0 +1,66 @@
+=============== Nov 9, 2022 (CST) ===============
+10:27:59.360206 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+10:27:59.472170 db@open opening
+10:27:59.539181 version@stat F·[] S·0B[] Sc·[]
+10:27:59.584178 db@janitor F·2 G·0
+10:27:59.584428 db@open done T·111.778111ms
+=============== Sep 2, 2023 (CST) ===============
+20:37:59.123605 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+20:37:59.123991 version@stat F·[] S·0B[] Sc·[]
+20:37:59.138290 db@open opening
+20:37:59.138427 journal@recovery F·1
+20:37:59.142282 journal@recovery recovering @1
+20:37:59.223050 memdb@flush created L0@2 N·412 S·116KiB "\x00!9..\xfa^\xb1,v169":"\xfd\xe3\xe5..\x15%g,v315"
+20:37:59.231908 version@stat F·[1] S·116KiB[116KiB] Sc·[0.25]
+20:37:59.297361 db@janitor F·3 G·0
+20:37:59.303718 db@open done T·165.385555ms
+=============== Sep 2, 2023 (CST) ===============
+20:42:02.043950 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+20:42:02.045190 version@stat F·[1] S·116KiB[116KiB] Sc·[0.25]
+20:42:02.063717 db@open opening
+20:42:02.063919 journal@recovery F·1
+20:42:02.068499 journal@recovery recovering @3
+20:42:02.325172 memdb@flush created L0@5 N·4865 S·650KiB "\x00\x15\xba..%\xff\x95,v3058":"\xff\xe9\x12..\x14\xe3\x9d,v5183"
+20:42:02.329393 version@stat F·[2] S·767KiB[767KiB] Sc·[0.50]
+20:42:02.475897 db@janitor F·4 G·0
+20:42:02.476376 db@open done T·412.585211ms
+20:42:09.980596 table@compaction L0·2 -> L1·0 S·767KiB Q·5279
+20:42:10.176215 table@build created L1@8 N·3711 S·713KiB "\x00\x15\xba..%\xff\x95,v3058":"\xff\xe9\x12..\x14\xe3\x9d,v5238"
+20:42:10.176922 version@stat F·[0 1] S·713KiB[0B 713KiB] Sc·[0.00 0.01]
+20:42:10.256959 table@compaction committed F-1 S-53KiB Ke·0 D·1566 T·276.222273ms
+20:42:10.276693 table@remove removed @5
+20:42:10.277844 table@remove removed @2
+=============== Sep 14, 2023 (CST) ===============
+15:15:18.009624 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:15:18.028325 version@stat F·[0 1] S·713KiB[0B 713KiB] Sc·[0.00 0.01]
+15:15:18.028359 db@open opening
+15:15:18.028574 journal@recovery F·1
+15:15:18.035382 journal@recovery recovering @6
+15:15:18.088311 memdb@flush created L0@9 N·86 S·2KiB "\n:V..k\x13\xca,v5358":"\xdb\xc7#..\xaa\xfa\xf6,v5364"
+15:15:18.095290 version@stat F·[1 1] S·715KiB[2KiB 713KiB] Sc·[0.25 0.01]
+15:15:18.302401 db@janitor F·4 G·0
+15:15:18.302480 db@open done T·274.057984ms
+15:15:28.964483 table@compaction L0·1 -> L1·1 S·715KiB Q·5366
+15:15:29.149628 table@build created L1@12 N·3722 S·704KiB "\x00\x15\xba..%\xff\x95,v3058":"\xff\xe9\x12..\x14\xe3\x9d,v5238"
+15:15:29.149760 version@stat F·[0 1] S·704KiB[0B 704KiB] Sc·[0.00 0.01]
+15:15:29.169413 table@compaction committed F-1 S-11KiB Ke·0 D·75 T·204.165721ms
+15:15:29.169738 table@remove removed @9
+15:15:29.170010 table@remove removed @8
+=============== Sep 14, 2023 (CST) ===============
+15:22:55.299031 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:22:55.299490 version@stat F·[0 1] S·704KiB[0B 704KiB] Sc·[0.00 0.01]
+15:22:55.299548 db@open opening
+15:22:55.299729 journal@recovery F·1
+15:22:55.303988 journal@recovery recovering @10
+15:22:56.109991 memdb@flush created L0@13 N·22196 S·3MiB "\x00\x02\x17..\xff\x1c&,v7514":"\xff\xfd2..[:\x16,v23562"
+15:22:56.114764 version@stat F·[1 1] S·4MiB[3MiB 704KiB] Sc·[0.25 0.01]
+15:22:56.339775 db@janitor F·4 G·0
+15:22:56.339953 db@open done T·1.040388046s
+15:23:07.335594 table@compaction L0·1 -> L1·1 S·4MiB Q·27565
+15:23:07.395406 table@build created L1@16 N·9020 S·2MiB "\x00\x02\x17..\xff\x1c&,v7514":"x\xf3O..\xef\xef\xb0,v1127"
+15:23:07.694089 table@build created L1@17 N·8861 S·2MiB "x\xfc\x93..\xc8Mr,v18187":"\xf3\x8c\r..\xf6\x93\a,v17918"
+15:23:07.737084 table@build created L1@18 N·910 S·210KiB "\xf3\x8d\x9e..Cr\x1e,v156":"\xff\xfd2..[:\x16,v23562"
+15:23:07.737190 version@stat F·[0 3] S·4MiB[0B 4MiB] Sc·[0.00 0.04]
+15:23:07.775390 table@compaction committed F+1 S-349KiB Ke·0 D·7127 T·439.719083ms
+15:23:07.775982 table@remove removed @13
+15:23:07.776222 table@remove removed @12

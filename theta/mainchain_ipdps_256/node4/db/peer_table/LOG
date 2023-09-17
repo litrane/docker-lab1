@@ -1,0 +1,54 @@
+=============== Nov 9, 2022 (CST) ===============
+10:27:03.006732 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+10:27:03.046424 db@open opening
+10:27:03.071493 version@stat F·[] S·0B[] Sc·[]
+10:27:03.138203 db@janitor F·2 G·0
+10:27:03.138441 db@open done T·91.614278ms
+=============== Sep 2, 2023 (CST) ===============
+20:38:00.457464 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+20:38:00.457843 version@stat F·[] S·0B[] Sc·[]
+20:38:00.457874 db@open opening
+20:38:00.457987 journal@recovery F·1
+20:38:00.496440 journal@recovery recovering @1
+20:38:00.540308 memdb@flush created L0@2 N·6 S·250B "p2pPeer,v6":"p2pPeer,v1"
+20:38:00.580056 version@stat F·[1] S·250B[250B] Sc·[0.25]
+20:38:00.692807 db@janitor F·3 G·0
+20:38:00.692844 db@open done T·234.953105ms
+=============== Sep 2, 2023 (CST) ===============
+20:42:03.321309 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+20:42:03.323735 version@stat F·[1] S·250B[250B] Sc·[0.25]
+20:42:03.323766 db@open opening
+20:42:03.324188 journal@recovery F·1
+20:42:03.426463 journal@recovery recovering @3
+20:42:03.441014 memdb@flush created L0@5 N·6 S·245B "p2pPeer,v13":"p2pPeer,v8"
+20:42:03.488343 version@stat F·[2] S·495B[495B] Sc·[0.50]
+20:42:03.520282 db@janitor F·4 G·0
+20:42:03.520378 db@open done T·196.599454ms
+=============== Sep 14, 2023 (CST) ===============
+15:15:18.998213 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:15:18.998559 version@stat F·[2] S·495B[495B] Sc·[0.50]
+15:15:18.998587 db@open opening
+15:15:18.998790 journal@recovery F·1
+15:15:19.032599 journal@recovery recovering @6
+15:15:19.074126 memdb@flush created L0@8 N·6 S·245B "p2pPeer,v20":"p2pPeer,v15"
+15:15:19.150625 version@stat F·[3] S·740B[740B] Sc·[0.75]
+15:15:19.296354 db@janitor F·5 G·0
+15:15:19.296397 db@open done T·297.799755ms
+=============== Sep 14, 2023 (CST) ===============
+15:22:56.595619 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:22:56.595911 version@stat F·[3] S·740B[740B] Sc·[0.75]
+15:22:56.595938 db@open opening
+15:22:56.596049 journal@recovery F·1
+15:22:56.629931 journal@recovery recovering @9
+15:22:56.656435 memdb@flush created L0@11 N·6 S·250B "p2pPeer,v27":"p2pPeer,v22"
+15:22:56.690409 version@stat F·[4] S·990B[990B] Sc·[1.00]
+15:22:56.820261 db@janitor F·6 G·0
+15:22:56.820309 db@open done T·224.359025ms
+15:22:56.820379 table@compaction L0·4 -> L1·0 S·990B Q·28
+15:22:56.841001 table@build created L1@14 N·1 S·209B "p2pPeer,v27":"p2pPeer,v27"
+15:22:56.841082 version@stat F·[0 1] S·209B[0B 209B] Sc·[0.00 0.00]
+15:22:56.880629 table@compaction committed F-3 S-781B Ke·0 D·23 T·60.170929ms
+15:22:56.881426 table@remove removed @11
+15:22:56.882080 table@remove removed @8
+15:22:56.882800 table@remove removed @5
+15:22:56.902226 table@remove removed @2

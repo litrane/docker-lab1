@@ -1,0 +1,65 @@
+=============== Nov 9, 2022 (CST) ===============
+10:27:59.379936 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+10:27:59.545563 db@open opening
+10:27:59.547500 version@stat F·[] S·0B[] Sc·[]
+10:27:59.622152 db@janitor F·2 G·0
+10:27:59.622204 db@open done T·76.593652ms
+=============== Sep 2, 2023 (CST) ===============
+20:37:59.354780 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+20:37:59.366538 version@stat F·[] S·0B[] Sc·[]
+20:37:59.372350 db@open opening
+20:37:59.372583 journal@recovery F·1
+20:37:59.377777 journal@recovery recovering @1
+20:37:59.469865 memdb@flush created L0@2 N·460 S·118KiB "\x00!9..\xfa^\xb1,v227":"\xfd\xe3\xe5..\x15%g,v361"
+20:37:59.475087 version@stat F·[1] S·118KiB[118KiB] Sc·[0.25]
+20:37:59.622884 db@janitor F·3 G·0
+20:37:59.623007 db@open done T·250.629608ms
+=============== Sep 2, 2023 (CST) ===============
+20:42:02.268599 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+20:42:02.289589 version@stat F·[1] S·118KiB[118KiB] Sc·[0.25]
+20:42:02.289702 db@open opening
+20:42:02.289871 journal@recovery F·1
+20:42:02.294978 journal@recovery recovering @3
+20:42:02.559476 memdb@flush created L0@5 N·4698 S·636KiB "\x00\x15\xba..%\xff\x95,v3152":"\xff\xe9\x12..\x14\xe3\x9d,v5119"
+20:42:02.565946 version@stat F·[2] S·755KiB[755KiB] Sc·[0.50]
+20:42:02.773684 db@janitor F·4 G·0
+20:42:02.773830 db@open done T·484.102733ms
+20:42:09.981372 table@compaction L0·2 -> L1·0 S·755KiB Q·5160
+20:42:10.257088 table@build created L1@8 N·3711 S·713KiB "\x00\x15\xba..%\xff\x95,v3152":"\xff\xe9\x12..\x14\xe3\x9d,v5119"
+20:42:10.257834 version@stat F·[0 1] S·713KiB[0B 713KiB] Sc·[0.00 0.01]
+20:42:10.315286 table@compaction committed F-1 S-41KiB Ke·0 D·1447 T·333.828793ms
+20:42:10.315630 table@remove removed @5
+20:42:10.315807 table@remove removed @2
+=============== Sep 3, 2023 (CST) ===============
+20:53:39.311890 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+20:53:39.312376 version@stat F·[0 1] S·713KiB[0B 713KiB] Sc·[0.00 0.01]
+20:53:39.312424 db@open opening
+20:53:39.312644 journal@recovery F·1
+20:53:39.325260 journal@recovery recovering @6
+20:53:39.399930 memdb@flush created L0@9 N·86 S·2KiB "\n:V..k\x13\xca,v5239":"\xdb\xc7#..\xaa\xfa\xf6,v5245"
+20:53:39.404856 version@stat F·[1 1] S·716KiB[2KiB 713KiB] Sc·[0.25 0.01]
+20:53:39.651916 db@janitor F·4 G·0
+20:53:39.652062 db@open done T·339.601914ms
+20:53:47.350978 table@compaction L0·1 -> L1·1 S·716KiB Q·5247
+20:53:47.585088 table@build created L1@12 N·3722 S·704KiB "\x00\x15\xba..%\xff\x95,v3152":"\xff\xe9\x12..\x14\xe3\x9d,v5119"
+20:53:47.585173 version@stat F·[0 1] S·704KiB[0B 704KiB] Sc·[0.00 0.01]
+20:53:47.604948 table@compaction committed F-1 S-11KiB Ke·0 D·75 T·253.908588ms
+20:53:47.605155 table@remove removed @9
+20:53:47.605362 table@remove removed @8
+=============== Sep 3, 2023 (CST) ===============
+21:53:24.386661 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+21:53:24.406084 version@stat F·[0 1] S·704KiB[0B 704KiB] Sc·[0.00 0.01]
+21:53:24.425918 db@open opening
+21:53:24.426167 journal@recovery F·1
+21:53:24.431503 journal@recovery recovering @10
+21:53:24.631763 memdb@flush created L0@13 N·9455 S·1MiB "\x00\ti..\xbd\x03\x01,v8003":"\xff\xe9Q..\x1f\xea\x98,v13841"
+21:53:24.662537 version@stat F·[1 1] S·2MiB[1MiB 704KiB] Sc·[0.25 0.01]
+21:53:24.846527 db@janitor F·4 G·0
+21:53:24.864926 db@open done T·438.940393ms
+21:53:32.516605 table@compaction L0·1 -> L1·1 S·2MiB Q·14703
+21:53:32.574528 table@build created L1@16 N·9585 S·2MiB "\x00\ti..\xbd\x03\x01,v8003":"\xfb\xe3\xf4..1\x8d\x9b,v13868"
+21:53:32.640498 table@build created L1@17 N·154 S·32KiB "\xfb\xf70..\x0f]\xff,v5074":"\xff\xe9Q..\x1f\xea\x98,v13841"
+21:53:32.640602 version@stat F·[0 2] S·2MiB[0B 2MiB] Sc·[0.00 0.02]
+21:53:32.686187 table@compaction committed F~ S-129KiB Ke·0 D·3438 T·169.310626ms
+21:53:32.686616 table@remove removed @13
+21:53:32.691886 table@remove removed @12
